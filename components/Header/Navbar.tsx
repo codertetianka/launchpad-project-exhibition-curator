@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -17,9 +17,14 @@ export default function Navbar() {
     };
   }, []);
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 p-7 pl-6 transition-all duration-300 ease-in-out 
-      ${scrolling ? 'bg-white bg-opacity-95 shadow-md' : 'bg-transparent'}`}>
+      ${scrolling ? 'bg-white shadow-md' : 'bg-transparent'} 
+      md:bg-opacity-100`}>
       <div className="flex justify-between items-start">
         <Link href="/" className="text-black text-5xl md:text-3xl sm:text-2xl font-bold mb-2">
           Exhibition Curator
@@ -36,19 +41,19 @@ export default function Navbar() {
 
       <ul className={`mt-4 md:flex md:space-x-8 ${isOpen ? 'block' : 'hidden'} md:block`}>
         <li className="relative group">
-          <Link href="/" className="block text-black text-xl py-1 md:py-0">
+          <Link href="/" className="block text-black text-xl py-1 md:py-0" onClick={closeMenu}>
             Home
             <span className="absolute left-0 right-0 bottom-[-5px] h-[2px] bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </Link>
         </li>
         <li className="relative group">
-          <Link href="/discover-exhibitions" className="block text-black text-xl py-1 md:py-0">
+          <Link href="/discover-exhibitions" className="block text-black text-xl py-1 md:py-0" onClick={closeMenu}>
             Discover
             <span className="absolute left-0 right-0 bottom-[-5px] h-[2px] bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </Link>
         </li>
         <li className="relative group">
-          <Link href="/user-profile" className="block text-black text-xl py-1 md:py-0">
+          <Link href="/user-profile" className="block text-black text-xl py-1 md:py-0" onClick={closeMenu}>
             Manage
             <span className="absolute left-0 right-0 bottom-[-5px] h-[2px] bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </Link>
