@@ -7,7 +7,7 @@ You have always dreamt of curating antiquities and fine artworks. Now, a coaliti
 ### Features
 
 - **Exhibition Management**: Users can create, edit, or delete virtual exhibitions, saving them to local storage.
-- **Saved**: Save upcoming, current or past exhibitions from Discove for easy access later.
+- **Saved**: Save upcoming, current or past exhibitions from Discover for easy access later.
 - **Artwork Details**: Each artwork provides detailed information such as the artist, gallery location (if known), and its history in exhibitions.
 - **Artwork Search**: Users can search for artworks using multiple filters, including artwork type, artist, and more.
 - **APIs Used**: Art Institute of Chicago (AIC) API and Harvard Art Museums API.
